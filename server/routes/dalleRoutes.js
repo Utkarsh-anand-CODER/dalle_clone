@@ -8,7 +8,7 @@ const router =express.Router();
 const configuration=new Configuration({
     apiKey:process.env.OPENAI_API_KEY,
 });
-const openai=new OpenAIApi(Configuration);
+const openai=new OpenAIApi(configuration);
 router.route('/').get((req,res)=>{
     res.status(200).json({message:"hello Utkarsh"});
 });
